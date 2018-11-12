@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class MainActivity extends AppCompatActivity {
+public class Buscar extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.guticsoft.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intento);
     }
 
-    public void botonServicio(View view){
-        Intent intento = new Intent(this, servicios.class);
+
+    public void botonMenu(View view){
+        Intent intento = new Intent(this, menu.class);
         startActivity(intento);
     }
-
-
 
 }
