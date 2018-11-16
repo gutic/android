@@ -14,7 +14,7 @@ public class MostrarMensajeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mostrar_mensaje);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(Buscar.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(Estado.EXTRA_MESSAGE);
 
         TextView textView= findViewById(R.id.textView);
         textView.setText(message);

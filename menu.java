@@ -85,7 +85,7 @@ public class menu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent intento = new Intent(this, Buscar.class);
+            Intent intento = new Intent(this, Estado.class);
             startActivity(intento);
         } else if (id == R.id.nav_gallery) {
             Intent intento = new Intent(this, servicios.class);
