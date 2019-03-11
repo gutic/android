@@ -87,7 +87,9 @@ public class servicios extends AppCompatActivity {
 
     private void obtenerDatosVolley(){
 
-        String url = "http://192.168.0.7/pizasystem/listar.php"; //aca va la dirección de donde tengas tu archivo que responda en json
+        Toast.makeText(servicios.this, "Cargando...", Toast.LENGTH_SHORT).show();
+
+        String url = "http://c1160078.ferozo.com/android/listar.php"; //aca va la dirección de donde tengas tu archivo que responda en json
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -139,10 +141,10 @@ public class servicios extends AppCompatActivity {
     }
 
     public void enviarDatos(View view){
-        cantidad = findViewById(R.id.editText4);
+        cantidad = findViewById(R.id.cantiad);
 
 
-        new CargarDatos().execute("http://192.168.0.7/pizasystem/registro.php?cantidad="+cantidad.getText()+"&producto="+opcion);
+        new CargarDatos().execute("http://c1160078.ferozo.com/android/registro.php?cantidad="+cantidad.getText()+"&producto="+opcion);
 
 
                 Toast.makeText(servicios.this, "Pedido Realizado de: "+cantidad.getText()+ ", de: "  + opcion, Toast.LENGTH_SHORT).show();

@@ -29,7 +29,7 @@ public class menu extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Algun dia me encontraran trabajo, mientras te saludo, humano", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -91,9 +91,11 @@ public class menu extends AppCompatActivity
             Intent intento = new Intent(this, servicios.class);
             startActivity(intento);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intento = new Intent(this, Pedidos.class);
+            startActivity(intento);
         } else if (id == R.id.nav_manage) {
-
+            Intent intento = new Intent(this, AgregarPedido.class);
+            startActivity(intento);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

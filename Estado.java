@@ -50,9 +50,9 @@ public class Estado extends AppCompatActivity {
 
     private void obtenerDatosVolley(){
    //     Toast.makeText(getApplicationContext(),"paso",Toast.LENGTH_LONG).show();
-        estado = findViewById(R.id.textView4);
+        estado = findViewById(R.id.textView6);
   //      estado.setText("Enviado");
-        String url = "http://192.168.0.7/pizasystem/estado.php"; //aca va la dirección de donde tengas tu archivo que responda en json
+        String url = "http://c1160078.ferozo.com/android/estado.php"; //aca va la dirección de donde tengas tu archivo que responda en json
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -74,7 +74,7 @@ public class Estado extends AppCompatActivity {
 
                     switch (_estado){
                         case "0":
-                            estado.setText("Enviado");
+                            estado.setText("Pedido Enviado");
                             break;
                         case "1":
                             estado.setText("Recibido");
@@ -130,7 +130,7 @@ public class Estado extends AppCompatActivity {
     //===========================================================================================================================
 
     public void estadoRecibido(View view){
-        new CargarDatos().execute("http://192.168.0.7/pizasystem/estadoEntregado.php?Estado=5");
+        new CargarDatos().execute("http://c1160078.ferozo.com/android/estadoEntregado.php?Estado=5");
 
 
         Toast.makeText(Estado.this, "Muchas gracias ", Toast.LENGTH_SHORT).show();
